@@ -1,7 +1,7 @@
 const Home = () => {
   return (
     <>
-      <div>home</div>
+      <h1>home</h1>
       <img src="/img/test.png" />
     </>
   )
