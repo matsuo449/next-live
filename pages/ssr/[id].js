@@ -10,12 +10,13 @@ const SsrPage = (props) => {
 }
 
 export const getServerSideProps = async (context) => {
-  const id = Number(context.params?.id)
+  const id = context.params?.id
   const res = await fetch(`https://jsonplaceholder.typicode.com/posts/${id}`)
   const article = await res.json()
+
   return {
     props: {
-      article: article
+      article
     }
   }
 }

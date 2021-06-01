@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react"
+import Link from "next/link"
 
 const CSRPage = () => {
   const [article, setArticle] = useState([])
@@ -14,8 +15,10 @@ const CSRPage = () => {
   return (
     <>
       <h1>Article Lists</h1>
-      {article.length > 0 && article.map((v) => (
-        <li key={v.id}>{v.title}</li>
+      {article && article.map((v) => (
+        <li key={v.id}>
+          <Link href={`/csr/${v.id}`}>{v.title}</Link>
+        </li>
       ))}
     </>
   )
