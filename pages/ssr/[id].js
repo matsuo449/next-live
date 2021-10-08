@@ -1,6 +1,4 @@
-const SsrPage = (props) => {
-  const { article } = props
-
+const SsrPage = ({ article }) => {
   return (
     <>
       <h1>{article.title}</h1>

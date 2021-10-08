@@ -6,12 +6,13 @@ const CsrPage = () => {
   const router = useRouter();
 
   useEffect(() => {
-    (async () => {
+    const f = async () => {
       const id = router.query.id
       const res = await fetch(`https://jsonplaceholder.typicode.com/posts/${id}`)
       const article = await res.json()
       setArticle(article)
-    })()
+    }
+    f()
   }, [router.query.id])
 
   return (
