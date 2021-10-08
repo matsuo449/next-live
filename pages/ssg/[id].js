@@ -1,6 +1,4 @@
-const SsgPage = (props) => {
-  const { article } = props
-
+const SsgPage = ({ article }) => {
   return (
     <>
       {article && !Object.keys(article).length && <div>データがありません。</div>}

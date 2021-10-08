@@ -5,11 +5,12 @@ const CSRPage = () => {
   const [article, setArticle] = useState([])
 
   useEffect(() => {
-    (async () => {
+    const f = async() => {
       const res = await fetch("https://jsonplaceholder.typicode.com/posts")
       const article = await res.json()
       setArticle(article)
-    })()
+    }
+    f()
   }, [])
 
   return (

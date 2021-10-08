@@ -1,12 +1,10 @@
 import Link from "next/link"
 
-const SsgPage = (props) => {
-  const {article} = props
-
+const SsgPage = ({ article }) => {
   return (
     <>
       <h1>Article Lists</h1>
-      { article && article.map((v) => (
+      {article && article.map((v) => (
         <li key={v.id}>
           <Link href={`/ssg/${v.id}`}>{v.title}</Link>
         </li>
